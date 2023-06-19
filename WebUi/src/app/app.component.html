@@ -1,0 +1,24 @@
+<div class="App">
+  <header class="App-header">
+    <h1>
+      <ng-container *ngIf="weatherForecasts$ | async as weatherForecasts;">
+
+        <ul>
+          <li *ngFor="let weatherForecast of weatherForecasts">
+            {{weatherForecast.date | date:'dd/MM/yyyy'}} - {{ weatherForecast.summary }}
+          </li>
+        </ul>
+      
+      </ng-container>
+
+      <br>
+      <a class="App-link" href="https://ssw.com.au" target="_blank" rel="noopener noreferrer">
+        By SSW
+      </a>
+    </h1>
+    <h2>
+    </h2>
+  </header>
+</div>
+
+<router-outlet></router-outlet>

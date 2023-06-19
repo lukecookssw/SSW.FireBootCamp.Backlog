@@ -1,0 +1,26 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.245.0/containers/dotnet-mssql
+{
+	"name": "C# (.NET) and MS SQL",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "app",
+	"workspaceFolder": "/workspace",
+	"mounts": ["source=devcontainers-workspace,target=/workspace,type=volume"],
+
+	// Configure tool-specific properties.
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {			
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+				"ms-dotnettools.csharp",
+				"rangav.vscode-thunder-client",
+				"hediet.vscode-drawio"
+			]
+		}
+	},
+
+	"postCreateCommand": "bash .devcontainer/postCreateCommand.sh",
+	"containerUser": "root",
+	"remoteUser": "root"
+}

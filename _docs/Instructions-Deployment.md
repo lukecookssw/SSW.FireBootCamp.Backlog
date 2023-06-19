@@ -1,0 +1,1 @@
+N/A - This project does not involve deployment, everything is done locally
